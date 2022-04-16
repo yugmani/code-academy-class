@@ -41,11 +41,33 @@ console.log(halley.behavior); //1
 //1. Create an empty class named Surgeon.
 //2. Inside the Surgeon class, create a constructor() method that accepts two parameters: name and department.
 //3. Inside the Surgeon constructor(), create name and department properties and set them equal to your input parameters.
+//4. In the Surgeon constructor, prepend the name and department properties with an underscore (_).
+//5. Inside of the constructor(), add a property named _remainingVacationDays and set it equal to 20.
+//6. Under the constructor(), create a getter called name that returns the value saved to _name.
+//6. Under the name getter, create a getter called department that returns the value saved to _department.
 class Surgeon {
   constructor(name, department) {
-    this.name = name;
-    this.department = department;
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
   }
+
+  get name(){
+    return this._name;
+  }
+
+  get department(){
+    return this._department;
+  }
+
+  get remainingVacationDays(){
+    return this._remainingVacationDays;
+  }
+
+  takeVacationDays(daysOff){
+    this._remainingVacationDays -= daysOff
+      }
+
 }
 
 //4. Create an instance of the Surgeon class — set the name to 'Francisco Romero' and department to 'Cardiovascular'.
@@ -57,3 +79,8 @@ const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
 
 // Save the instance to a constant variable called surgeonJackson.
 const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
+
+
+// Methods
+// *********************************
+
