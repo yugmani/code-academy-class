@@ -43,6 +43,10 @@ console.log(halley.behavior); //1
 //3. Inside the Surgeon constructor(), create name and department properties and set them equal to your input parameters.
 //4. In the Surgeon constructor, prepend the name and department properties with an underscore (_).
 //5. Inside of the constructor(), add a property named _remainingVacationDays and set it equal to 20.
+
+//Methods
+// ***********************************************
+
 //6. Under the constructor(), create a getter called name that returns the value saved to _name.
 //6. Under the name getter, create a getter called department that returns the value saved to _department.
 class Surgeon {
@@ -52,22 +56,21 @@ class Surgeon {
     this._remainingVacationDays = 20;
   }
 
-  get name(){
+  get name() {
     return this._name;
   }
 
-  get department(){
+  get department() {
     return this._department;
   }
 
-  get remainingVacationDays(){
+  get remainingVacationDays() {
     return this._remainingVacationDays;
   }
 
-  takeVacationDays(daysOff){
-    this._remainingVacationDays -= daysOff
-      }
-
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
 }
 
 //4. Create an instance of the Surgeon class — set the name to 'Francisco Romero' and department to 'Cardiovascular'.
@@ -80,7 +83,11 @@ const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular');
 // Save the instance to a constant variable called surgeonJackson.
 const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
 
+//6. At the bottom of main.js, use console.log() to print the value saved to thename property of the surgeonRomero object.
+console.log(surgeonRomero.name);
 
-// Methods
-// *********************************
+//7. Call .takeVacationDays() on surgeonRomero, with an input of 3.
+surgeonRomero.takeVacationDays(3);
 
+// 8. After the call to .takeVacationDays(), use console.log() to print the value saved to the remainingVacationDays property of the surgeonRomero instance.
+console.log(surgeonRomero.remainingVacationDays); //17
