@@ -91,3 +91,4 @@ surgeonRomero.takeVacationDays(3);
 
 // 8. After the call to .takeVacationDays(), use console.log() to print the value saved to the remainingVacationDays property of the surgeonRomero instance.
 console.log(surgeonRomero.remainingVacationDays); //17
+
