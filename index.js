@@ -48,7 +48,7 @@ console.log(halley.behavior); //1
 // ***********************************************
 
 //6. Under the constructor(), create a getter called name that returns the value saved to _name.
-//6. Under the name getter, create a getter called department that returns the value saved to _department.
+//7. Under the name getter, create a getter called department that returns the value saved to _department.
 class Surgeon {
   constructor(name, department) {
     this._name = name;
